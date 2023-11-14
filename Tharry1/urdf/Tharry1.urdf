@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Tharry1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000215514088654669 -0.000716315380817006 0.0237606201971868"
+        rpy="0 0 0" />
+      <mass
+        value="0.406103761603504" />
+      <inertia
+        ixx="0.0001"
+        ixy="0"
+        ixz="0"
+        iyy="0.0003"
+        iyz="0"
+        izz="0.0002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.0352941176470588 0.968627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_link">
+    <inertial>
+      <origin
+        xyz="1.35729605749146E-07 -2.06106699155578E-08 0.000763150006826252"
+        rpy="0 0 0" />
+      <mass
+        value="0.0310322138231807" />
+      <inertia
+        ixx="0.0002"
+        ixy="0"
+        ixz="0"
+        iyy="0.0002"
+        iyz="0"
+        izz="0.0001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0588 0.0667 0.014"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="right_link">
+    <inertial>
+      <origin
+        xyz="-1.35729605776902E-07 -2.0610669920762E-08 -0.00076315000682646"
+        rpy="0 0 0" />
+      <mass
+        value="0.0310322138231812" />
+      <inertia
+        ixx="0.0002"
+        ixy="0"
+        ixz="0"
+        iyy="0.0002"
+        iyz="0"
+        izz="0.0001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.058826 -0.0667 0.014"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="castor_wheel_Link">
+    <inertial>
+      <origin
+        xyz="-1.75296463446995E-06 -0.0107839823055964 -3.52745917198138E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0175668126401541" />
+      <inertia
+        ixx="0.0002"
+        ixy="0"
+        ixz="0"
+        iyy="0.0002"
+        iyz="0"
+        izz="0.0001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/castor_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/castor_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_wheel_joint"
+    type="fixed">
+    <origin
+      xyz="0.09546 0 -0.0008"
+      rpy="1.5708 0 1.5728" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_wheel_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ultrasonido_Link">
+    <inertial>
+      <origin
+        xyz="4.20166807835057E-06 -5.26817094704743E-05 0.00567658489127215"
+        rpy="0 0 0" />
+      <mass
+        value="0.00622730507584706" />
+      <inertia
+        ixx="0.0002"
+        ixy="0"
+        ixz="0"
+        iyy="0.0002"
+        iyz="0"
+        izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/ultrasonido_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Tharry1/meshes/ultrasonido_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ultrasonido_joint"
+    type="fixed">
+    <origin
+      xyz="0.1047 0.0011113 0.01325"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonido_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo reference="base_link">
+    <mu1>200</mu1>
+    <mu2>200</mu2>
+    <kp>1000000</kp>
+    <kd>1</kd>
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+  <gazebo reference="left_link">
+    <mu1>200</mu1>
+    <mu2>200</mu2>
+    <kp>1000000</kp>
+    <kd>1</kd>
+    <material>Gazebo/Gray</material>
+  </gazebo>
+
+  <gazebo reference="right_link">
+    <mu1>200</mu1>
+    <mu2>200</mu2>
+    <kp>1000000</kp>
+    <kd>1</kd>
+    <material>Gazebo/Gray</material>
+  </gazebo>
+
+  <gazebo reference="castor_wheel_Link">
+    <mu1>0</mu1>
+    <mu2>0</mu2>
+    <kp>1000000</kp>
+    <kd>1</kd>
+    <material>Gazebo/Gray</material>
+  </gazebo>
+
+  <gazebo reference="ultrasonido_Link">
+    <mu1>200</mu1>
+    <mu2>200</mu2>
+    <kp>1000000</kp>
+    <kd>1</kd>
+    <material>Gazebo/Gray</material>
+  </gazebo>
+  
+   <transmission name="left_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="left_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+   </transmission>
+    
+    
+   <transmission name="right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="right_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+   </transmission>
+
+  <gazebo>
+    <plugin name="two_wheeled_robot_diff_drive" filename="libgazebo_ros_diff_drive.so">
+ 
+      <update_rate>100</update_rate>
+      
+      <!-- wheels -->
+      <left_joint>left_joint</left_joint>
+      <right_joint>right_joint</right_joint>
+ 
+      <!-- kinematics -->
+      <wheel_separation>0.1</wheel_separation>
+      <wheel_diameter>0.07</wheel_diameter>
+ 
+      <!-- limits -->
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>20.0</max_wheel_acceleration>
+ 
+      <!-- Receive velocity commands on this ROS topic -->
+      <command_topic>cmd_vel</command_topic>
+ 
+      <!-- output -->
+      <!-- When false, publish no wheel odometry data to a ROS topic -->
+      <publish_odom>true</publish_odom>
+ 
+      <!-- When true, publish coordinate transform from odom to base_footprint -->
+      <!-- I usually use the robot_localization package to publish this transform -->  
+      <publish_odom_tf>false</publish_odom_tf>
+     
+      <!-- When true, publish coordinate transform from base_link to the wheels -->
+      <!-- The robot_state_publisher package is often used to publish this transform -->  
+      <publish_wheel_tf>true</publish_wheel_tf>
+ 
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom_link</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+ 
+      <odometry_source>1</odometry_source>
+      <ros>
+        <remapping>odom:=wheel/odometry</remapping>
+      </ros>
+    </plugin>
+  
+  </gazebo>
+
+</robot>
