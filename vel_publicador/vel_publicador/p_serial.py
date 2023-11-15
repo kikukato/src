@@ -4,7 +4,7 @@ from geometry_msgs.msg import Twist
 import serial
 
 class SerialCommandPublisher(Node):
-    def _init_(self):
+    def __init__(self):
         super()._init_('serial_command_publisher')
         self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
         self.serial_port = '/dev/ttyACM0'  # Ajusta el puerto serial según tu configuración
