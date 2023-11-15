@@ -5,7 +5,7 @@ import serial
 
 class SerialCommandPublisher(Node):
     def __init__(self):
-        super()._init_('serial_command_publisher')
+        super().__init__('serial_command_publisher')
         self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
         self.serial_port = '/dev/ttyACM0'  # Ajusta el puerto serial según tu configuración
         self.serial_baudrate = 9600
